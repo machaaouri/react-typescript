@@ -8,7 +8,7 @@ export const Counter = () => {
     useEffect(() => {
         // update document title using the browser API
         document.title = `You clicked ${count} times`;
-    },[count])
+    },[count]) // Only re-run the effect if count changes
 
     return (
         <div>
