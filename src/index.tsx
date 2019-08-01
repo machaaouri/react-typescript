@@ -1,4 +1,4 @@
-import { App } from "./components/app";
+import { App } from "./components/hooks/app";
 import * as  React from "react"
 import * as ReactDOM  from "react-dom"
 
