@@ -5,10 +5,12 @@ export const Counter = () => {
 
     const [count,setCount] = useState(0);
 
-    useEffect(() => {
-        // update document title using the browser API
-        document.title = `You clicked ${count} times`;
-    },[count]) // Only re-run the effect if count changes
+    if(count != 1){
+        useEffect(() => {
+            // update document title using the browser API
+            document.title = `You clicked ${count} times`;
+        },[count]) // Only re-run the effect if count changes
+    }
 
     return (
         <div>
