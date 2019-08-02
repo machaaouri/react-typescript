@@ -4,7 +4,7 @@ import * as React from "react";
 
 export const TextInputWithFocusButton = ()  => {
 
-    const inputEl = useRef(null);
+    const inputEl = useRef<HTMLInputElement>(null);
 
     const onButtonClick = () => {
         // `current` points to the mounted text input element
