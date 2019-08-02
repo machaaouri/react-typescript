@@ -23,9 +23,14 @@ export const Counter = () => {
 
 // Counter using a reducer
 type State = {count: number};
-type Actions ={type: "increment" | "decrement"}
+type Actions ={type: "increment" | "decrement"| "reset"}
 
 const initialState : State = {count: 0};
+const initialCount = 0;
+
+const init = (initialCount: number): State => {
+    return {count: initialCount}
+}
 
 const reducer = (state: State, action: Actions) : State => {
 
@@ -34,6 +39,8 @@ const reducer = (state: State, action: Actions) : State => {
             return {count: state.count + 1};
         case "decrement":
             return {count: state.count - 1};
+        case "reset":
+                return init(initialCount);
         default:
             return state;
     }
@@ -41,11 +48,16 @@ const reducer = (state: State, action: Actions) : State => {
 
 export const CounterReducer = () => {
 
-    const [state, dispatch] = useReducer(reducer,initialState);
-
+    //const [state, dispatch] = useReducer(reducer,initialState);
+    const [state, dispatch] = useReducer(reducer,initialCount,init);
     return (
         <>
           Count: {state.count}
+          <button
+            onClick={() => dispatch({type: 'reset'})}>
+
+            Reset
+          </button>
           <button onClick={() => dispatch({type: 'increment'})}>+</button>
           <button onClick={() => dispatch({type: 'decrement'})}>-</button>
         </>
