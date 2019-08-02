@@ -3,7 +3,7 @@ import { finished } from 'stream';
 
 export const useFriendStatus = (friendID: number) => {
 
-    const [isOnline, setIsOnline] =  useState(null);
+    const [isOnline, setIsOnline] =  useState<boolean>();
 
     useEffect(() => {
 
