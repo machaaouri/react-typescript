@@ -11,10 +11,10 @@ export const useFriendStatus = (friendID: number) => {
             setIsOnline(status)
         }
 
-        ChatAPI().subscribeToFriendStatus(friendID, handleStatusChange);
+        ChatAPI.subscribeToFriendStatus(friendID, handleStatusChange);
 
         return () => {
-            ChatAPI().unsubscribeFromFriendStatus(friendID, handleStatusChange);
+            ChatAPI.unsubscribeFromFriendStatus(friendID, handleStatusChange);
         }
         
     },[friendID])
@@ -28,20 +28,14 @@ export const useFriendStatus = (friendID: number) => {
 const fiendStatus = [true, false, true];
 
 
-const ChatAPI = () :  IChatAPI => {
+const ChatAPI = {
 
-    return {
         subscribeToFriendStatus (friendID: number, handleStatusChange: (status: boolean) => void){
             console.log("Subscribing for: " + friendID +  " status: " +  fiendStatus[friendID]);
             handleStatusChange(fiendStatus[friendID]);
         },
+
         unsubscribeFromFriendStatus(friendID: number, handleStatusChange: (status) => void) {
             console.log("Unsubscribing from: " + friendID);
         }
-    }
-}
-
-interface IChatAPI {
-    subscribeToFriendStatus : (id: number, func:(status: boolean) => void) => void;
-    unsubscribeFromFriendStatus : (id: number, func:(status: boolean) => void) => void;
 }
