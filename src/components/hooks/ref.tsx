@@ -4,6 +4,12 @@ import * as React from "react";
 
 export const TextInputWithFocusButton = ()  => {
 
+    const [value,setValue] = React.useState<string>('');
+
+    const onChange = (event) => {
+            setValue(event.target.value)
+    }
+
     const inputEl = useRef<HTMLInputElement>(null);
 
     const onButtonClick = () => {
@@ -13,7 +19,7 @@ export const TextInputWithFocusButton = ()  => {
 
     return (
         <div>
-          <input ref={inputEl} type="text" />
+          <input ref={inputEl} type="text"  value={value} onChange={(e) => onChange(e)} />
           <button onClick={onButtonClick}>Focus the input</button>
         </div>
       );
