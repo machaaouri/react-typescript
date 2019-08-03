@@ -3,6 +3,7 @@ import { Counter, CounterReducer } from './counter';
 import { ChatRecipientPicker } from './friend-list';
 import { TextInputWithFocusButton } from './ref';
 import { Mouse } from './mouse';
+import { KeyPresed } from './key';
 
 export const App = ()  => {
     return <div>
@@ -11,5 +12,6 @@ export const App = ()  => {
              <ChatRecipientPicker />
              <CounterReducer />
              <TextInputWithFocusButton />
+             <KeyPresed />
           </div>
 }
