@@ -5,6 +5,7 @@ import { TextInputWithFocusButton } from './ref';
 import { Mouse } from './mouse';
 import { KeyPresed } from './key';
 import { Grid } from './grid';
+import { Memo } from './useMemo';
 
 export const App = ()  => {
     return <div>
@@ -15,5 +16,6 @@ export const App = ()  => {
              <TextInputWithFocusButton />
              <KeyPresed />
              <Grid />
+             <Memo />
           </div>
 }
