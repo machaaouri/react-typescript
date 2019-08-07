@@ -6,6 +6,7 @@ import { Mouse } from './mouse';
 import { KeyPresed } from './key';
 import { Grid } from './grid';
 import { Memo } from './useMemo';
+import { Previous } from './usePrevious';
 
 export const App = ()  => {
     return <div>
@@ -17,5 +18,6 @@ export const App = ()  => {
              <KeyPresed />
              <Grid />
              <Memo />
+             <Previous />
           </div>
 }
