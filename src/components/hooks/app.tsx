@@ -7,6 +7,7 @@ import { KeyPresed } from './key';
 import { Grid } from './grid';
 import { Memo } from './useMemo';
 import { Previous } from './usePrevious';
+import { WindowSize } from './useWindowSize';
 
 export const App = ()  => {
     return <div>
@@ -19,5 +20,6 @@ export const App = ()  => {
              <Grid />
              <Memo />
              <Previous />
+             <WindowSize />
           </div>
 }
