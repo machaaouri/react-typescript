@@ -16,7 +16,7 @@ export const Hover =() => {
 const useHover = () => {
     const [value, setValue] = useState(false);
   
-    const ref = useRef<HTMLDivElement>(null);
+    const ref = useRef(null);
   
     const handleMouseOver = () => setValue(true);
     const handleMouseOut = () => setValue(false);
