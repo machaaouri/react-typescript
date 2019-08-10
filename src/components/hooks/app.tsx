@@ -8,6 +8,7 @@ import { Grid } from './grid';
 import { Memo } from './useMemo';
 import { Previous } from './usePrevious';
 import { WindowSize } from './useWindowSize';
+import { Hover } from './useHover';
 
 export const App = ()  => {
     return <div>
@@ -21,5 +22,6 @@ export const App = ()  => {
              <Memo />
              <Previous />
              <WindowSize />
+             <Hover />
           </div>
 }
