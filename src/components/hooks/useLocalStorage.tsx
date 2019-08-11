@@ -1,7 +1,24 @@
 import { useState } from "react";
+import * as React from "react";
 
 
+// Usage
+export const MylocalStorage = () => {
 
+    const [name, setName] = useLocalStorage('name', 'Houssame');
+  
+    return (
+      <div>
+        <input
+          type="text"
+          placeholder="Enter your name"
+          value={name}
+          onChange={e => setName(e.target.value)}
+        />
+      </div>
+    );
+  }
+  
 
 
 

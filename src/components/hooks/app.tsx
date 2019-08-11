@@ -9,6 +9,7 @@ import { Memo } from './useMemo';
 import { Previous } from './usePrevious';
 import { WindowSize } from './useWindowSize';
 import { Hover } from './useHover';
+import { MylocalStorage } from './useLocalStorage';
 
 export const App = ()  => {
     return <div>
@@ -23,5 +24,6 @@ export const App = ()  => {
              <Previous />
              <WindowSize />
              <Hover />
+             <MylocalStorage />
           </div>
 }
