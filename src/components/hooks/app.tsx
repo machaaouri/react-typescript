@@ -10,6 +10,7 @@ import { Previous } from './usePrevious';
 import { WindowSize } from './useWindowSize';
 import { Hover } from './useHover';
 import { MylocalStorage } from './useLocalStorage';
+import { OnClickOutside } from './useOnClickOutside';
 
 export const App = ()  => {
     return <div>
@@ -25,5 +26,6 @@ export const App = ()  => {
              <WindowSize />
              <Hover />
              <MylocalStorage />
+             <OnClickOutside />
           </div>
 }
