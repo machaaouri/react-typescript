@@ -42,9 +42,9 @@ export const Countries = () => {
       {isSearching && <div>Searching ...</div>}
 
       {results.map(result => (
-        <div key={result.alpha2Code}>
-          <h4>{result.name}</h4>
-          <img src={result.flag} width="20" height="20" />
+        <div key={result.alpha2Code} className="country">
+          <img src={result.flag} className="flag" />
+          <label>{result.name}</label> 
         </div>
       ))}
     </div>
