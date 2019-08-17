@@ -29,8 +29,9 @@ function usePrevious(value) {
     // Store current value in ref
     useEffect(() => {
       ref.current = value;
+      console.log(ref.current); // shows late after the react component (<Previous />) is mounted
     }, [value]); // Only re-run if value changes
-    
+    console.log(ref.current); // Shows first as soon as the function is called
     // Return previous value (happens before update in useEffect above)
     return ref.current;
   }
