@@ -12,9 +12,11 @@ import { Hover } from './useHover';
 import { MylocalStorage } from './useLocalStorage';
 import { OnClickOutside } from './useOnClickOutside';
 import { Countries } from './useDebounce';
+import { Auth } from './useAuth';
 
 export const App = ()  => {
     return <div>
+             <Auth />
              <Countries />
              <Mouse />
              <Counter />
