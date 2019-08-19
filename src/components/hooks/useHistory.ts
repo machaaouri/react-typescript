@@ -76,7 +76,7 @@ export const useHistory = (initialPresent: []) => {
     // Setup our callback functions
     // We memoize with useCallback to prevent unnecessary re-renders
 
-     const undo = useCallback(() => dispatch({type:"UNDO"}),[canUndo,dispatch]);
+     const undo = () => dispatch({type:"UNDO"});
 
      const redo = useCallback(
         () => {
